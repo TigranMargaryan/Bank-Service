@@ -26,7 +26,7 @@ Minimum withdrawal amount is 10$
 When exchanging currency, the bank withdraws 0.5% of the money
 
 The person can log in his account write his
-                •Email
-                •Password 
-                •Secret code
+                 •Email
+                 •Password 
+                 •Secret code
 
