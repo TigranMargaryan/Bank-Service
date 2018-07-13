@@ -1,9 +1,9 @@
-                                         # Online bank
+                                         Online bank
 
- #Site for storing money
- #The person can store his money in this site, transfer, withdraw or add it
- #The person can sign up in this site 
-         #He need fill in the blanks 
+ Site for storing money
+ The person can store his money in this site, transfer, withdraw or add it
+ The person can sign up in this site 
+         He need fill in the blanks 
                 •Sign up
                 •First Name
                 •Last Name 
