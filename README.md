@@ -1,8 +1,7 @@
    # Online bank
 
 ## Site for storing money
-#### The person can store his money in this site, transfer, withdraw or add it
-#### The person can sign up in this site 
+
 ## He need fill in the blanks 
 ##### •Sign up
 ##### •First Name
@@ -19,6 +18,10 @@
 
 
 ## Аfter filling the person will receive an ID code
+
+#### The person can store his money in this site, transfer, withdraw or add it
+
+#### The person can sign up in this site 
 
 #### If the person wants to add  or withdraw  money he needs to write the ID code
 
