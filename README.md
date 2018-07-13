@@ -17,12 +17,17 @@
 ##### •Telephone number
 ##### •Invent and write secret code(at least 10 digits)
 
-#### Аfter filling the person will receive an ID code
+
+## Аfter filling the person will receive an ID code
+
 #### If the person wants to add  or withdraw  money he needs to write the ID code
+
 #### Аll data will be stored in the database
  
 #### The person can Exchange his money (RUB,EUR,USD)
+
 #### Minimum withdrawal amount is 10$
+
 #### When exchanging currency, the bank withdraws 0.5% of the money
 
 ## The person can log in his account write his
