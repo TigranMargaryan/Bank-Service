@@ -1,6 +1,6 @@
-#H1 Online bank
+# Online bank
 
-Site for storing money
+## Site for storing money
 The person can store his money in this site, transfer, withdraw or add it
 The person can sign up in this site 
 He need fill in the blanks 
@@ -25,7 +25,7 @@ The person can Exchange his money (RUB,EUR,USD)
 Minimum withdrawal amount is 10$
 When exchanging currency, the bank withdraws 0.5% of the money
 
-The person can log in his account write his
+#### The person can log in his account write his
 Email
 Password 
 Secret code
