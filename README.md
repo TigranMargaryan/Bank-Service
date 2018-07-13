@@ -2,7 +2,7 @@
 
 ## Site for storing money
 
-## He need fill in the blanks 
+### The client need fill in the blanks 
 ##### •Sign up
 ##### •First Name
 ##### •Last Name 
@@ -17,23 +17,23 @@
 ##### •Invent and write secret code(at least 10 digits)
 
 
-## Аfter filling the person will receive an ID code
+### Аfter filling the person will receive an ID code
 
-#### The person can store his money in this site, transfer, withdraw or add it
+#### The client can store his money in this site, transfer, withdraw or add it
 
-#### The person can sign up in this site 
+#### The client can sign up in this site 
 
-#### If the person wants to add  or withdraw  money he needs to write the ID code
+#### If the client wants to add  or withdraw  money he needs to write the ID code
 
 #### Аll data will be stored in the database
  
-#### The person can Exchange his money (RUB,EUR,USD)
+#### The client can Exchange his money (RUB,EUR,USD)
 
 #### Minimum withdrawal amount is 10$
 
 #### When exchanging currency, the bank withdraws 0.5% of the money
 
-## The person can log in his account write his
+### The client can log in his account write his
 ##### •Email
 ##### •Password 
 ##### •Secret code
