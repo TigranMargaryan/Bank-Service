@@ -14,7 +14,6 @@
    - Credit card number
    - Region 
    - Telephone number
-   - Invent and write secret code(at least 10 digits)
 
 
 ### Аfter filling the person will receive an ID code
@@ -36,6 +35,3 @@
 ### The client can log in his account write his
    - Email
    - Password 
-   - Secret code
-
-
