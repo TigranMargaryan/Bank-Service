@@ -38,16 +38,16 @@
    - Password 
    
 # Technologies list
-  -Database Systems:
+  - Database Systems:
       MySQL
       MySQL workbench
-  -Scripting Languages:
+  - Scripting Languages:
       JavaScript 
-  -Programming Languages:
+  - Programming Languages:
       Java
-  -Markup Languages:
+  - Markup Languages:
       HTML
       Css
-  -IDEs and Editors:
+  - IDEs and Editors:
       Atom
       Eclipse
