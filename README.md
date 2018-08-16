@@ -39,8 +39,8 @@
    
 # Technologies list
   - Database Systems:
-     - MySQL
-     - MySQL workbench
+     - MySQL (v8.0.12)
+     - MySQL workbench (v8.0v12)
   - Scripting Languages:
      - JavaScript 
   - Programming Languages:
