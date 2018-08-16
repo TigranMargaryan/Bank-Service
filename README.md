@@ -1,6 +1,7 @@
-   # Online bank
-
-## Site for storing money
+  # Front- And and Back-End Teamwork
+ 
+ ## Purpose 
+ ## Create 'Online Bank' website for storing money.
 
 ### The client need fill in the blanks 
    - Sign up
@@ -35,3 +36,18 @@
 ### The client can log in his account write his
    - Email
    - Password 
+   
+# Technologies list
+-Database Systems:
+MySQL
+MySQL workbench
+-Scripting Languages:
+JavaScript 
+-Programming Languages:
+Java
+-Markup Languages:
+HTML
+Css
+-IDEs and Editors:
+Atom
+Eclipse
