@@ -39,15 +39,15 @@
    
 # Technologies list
   - Database Systems:
-      MySQL
-      MySQL workbench
+     - MySQL
+     - MySQL workbench
   - Scripting Languages:
-      JavaScript 
+     - JavaScript 
   - Programming Languages:
-      Java
+     - Java
   - Markup Languages:
-      HTML
-      Css
+     - HTML
+     - Css
   - IDEs and Editors:
-      Atom
-      Eclipse
+     - Atom
+     - Eclipse
