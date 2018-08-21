@@ -9,7 +9,6 @@
    - Last Name 
    - Email
    - Birthday  dd-mm-yyyy (must be more than 18 years old)
-   - Gender (F or M)
    - Username 
    - Password (only English letters ,must be characters and numbers)
    - Credit card number
