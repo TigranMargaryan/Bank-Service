@@ -1,10 +1,10 @@
   # Front- And and Back-End Teamwork
  
  ## Purpose 
- ## Create 'Online Bank' website for storing money.
+  Create 'Online Bank' website for storing money.
 
-### The client need fill in the blanks 
-   #### Sign up
+ The client need fill in the blanks 
+    Sign up
    - First Name
    - Last Name 
    - Email
@@ -16,21 +16,21 @@
    - Telephone number
 
 
-### Аfter filling the person will receive an ID code
+ Аfter filling the person will receive an ID code
 
-#### The client can store his money in this site, transfer, withdraw or add it
+ The client can store his money in this site, transfer, withdraw or add it
 
-#### The client can sign up in this site 
+ The client can sign up in this site 
 
-#### If the client wants to add  or withdraw  money he needs to write the ID code
+ If the client wants to add  or withdraw  money he needs to write the ID code
 
-#### Аll data will be stored in the database
+ Аll data will be stored in the database
  
-#### The client can Exchange his money (RUB,EUR,USD)
+ The client can Exchange his money (RUB,EUR,USD)
 
-#### Minimum withdrawal amount is 10$
+ Minimum withdrawal amount is 10$
 
-#### When exchanging currency, the bank withdraws 0.5% of the money
+ When exchanging currency, the bank withdraws 0.5% of the money
 
 ### The client can log in his account write his
    - Email
@@ -38,8 +38,8 @@
    
 # Technologies list
   - Database Systems:
-     - MySQL (v8.0.12)
-     - MySQL workbench (v8.0v12)
+     - MySQL  https://dev.mysql.com/downloads/windows/installer/8.0.html
+     - MySQL workbench  https://dev.mysql.com/downloads/workbench/
   - Scripting Languages:
      - JavaScript 
   - Programming Languages:
@@ -48,5 +48,5 @@
      - HTML
      - Css
   - IDEs and Editors:
-     - Atom
-     - Eclipse
+       - Atom   https://atom.io/
+     - Eclipse  https://www.eclipse.org/downloads/
