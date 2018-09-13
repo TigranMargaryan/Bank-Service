@@ -41,7 +41,7 @@
 # Technologies list
   - Database Systems:
      - MySQL  https://dev.mysql.com/downloads/windows/installer/8.0.html
-     -video how to install MySQL https://www.youtube.com/watch?v=Ddx13KlW8yQ&t=412s
+     - video how to install MySQL https://www.youtube.com/watch?v=Ddx13KlW8yQ&t=412s
      - MySQL workbench  https://dev.mysql.com/downloads/workbench/
   - Scripting Languages:
      - JavaScript 
