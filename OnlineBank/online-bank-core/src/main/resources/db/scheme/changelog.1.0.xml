@@ -1,0 +1,266 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="NOW" value="UNIX_TIMESTAMP(NOW())" dbms="mysql"/>
+    <property name="GUID" value="REPLACE(UUID(), '-', '')" dbms="mysql"/>
+
+    <changeSet id="1" author="Tigran Margaryan" runOnChange="true">
+        <comment>Online Bank db</comment>
+
+        <sql>
+            SET foreign_key_checks = 0;
+            DROP TABLE IF EXISTS `credit_card`;
+            DROP TABLE IF EXISTS `branch`;
+            DROP TABLE IF EXISTS `user`;
+            DROP TABLE IF EXISTS `user_address`;
+            DROP TABLE IF EXISTS `user_profile`;
+            DROP TABLE IF EXISTS `loan`;
+            DROP TABLE IF EXISTS `user_utility`;
+            DROP TABLE IF EXISTS `gas`;
+            DROP TABLE IF EXISTS `water`;
+            DROP TABLE IF EXISTS `electricity`;
+            DROP TABLE IF EXISTS `user_phone`;
+            SET foreign_key_checks = 1;
+        </sql>
+
+        <!--User table -->
+        <createTable tableName="user">
+            <column name="id" type="VARCHAR2(50)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="first_name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+           <column name="email" type="VARCHAR2(32)">
+               <constraints primaryKey="false"/>
+           </column>
+            <column name="password" type="VARCHAR2(32)">
+                <constraints primaryKey="false"/>
+            </column>
+        </createTable>
+
+
+        <!--Branch table -->
+        <createTable tableName="branch">
+            <column name="id" type="VARCHAR2(50)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR2(32)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="assets" type="BIGINT">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+     <!--   <addForeignKeyConstraint baseTableName="branch"
+                                 baseColumnNames="user_id"
+                                 constraintName="BRANCH_USER_FK"
+                                 referencedTableName="user"
+                                 referencedColumnNames="id"
+                                 onUpdate="CASCADE"
+                                 onDelete="CASCADE"/>
+         -->
+
+        <!--Credit_card table -->
+        <createTable tableName="credit_card">
+            <column name="id" type="VARCHAR2(50)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="balance" type="VARCHAR2(32)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="type" type="VARCHAR2(32)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="code" type="VARCHAR2(32)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="user_id" type="VARCHAR2(50)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="credit_card"
+                                 baseColumnNames="user_id"
+                                 constraintName="CREDIT_CARD_USER_FK"
+                                 referencedTableName="user"
+                                 referencedColumnNames="id"
+                                 onUpdate="CASCADE"
+                                 onDelete="CASCADE"/>
+
+        <!--User address -->
+
+        <createTable tableName="user_address">
+            <column name="id" type="VARCHAR2(50)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="country" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="city" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="street" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR2(50)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="user_address"
+                                 baseColumnNames="user_id"
+                                 constraintName="USER_ADDRESS_USER_FK"
+                                 referencedTableName="user"
+                                 referencedColumnNames="id"
+                                 onUpdate="CASCADE"
+                                 onDelete="CASCADE"/>
+
+        <!-- User Loan -->
+        <createTable tableName="loan">
+            <column name="id" type="VARCHAR2(50)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="amount" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="branch_id" type="VARCHAR2(50)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="loan"
+                                 baseColumnNames="user_id"
+                                 constraintName="USER_LOAN_FK"
+                                 referencedTableName="user"
+                                 referencedColumnNames="id"
+                                 onUpdate="CASCADE"
+                                 onDelete="CASCADE"/>
+        <addForeignKeyConstraint baseTableName="loan"
+                                 baseColumnNames="branch_id"
+                                 constraintName="LOAN_BRANCH_FK"
+                                 referencedTableName="branch"
+                                 referencedColumnNames="id"
+                                 onUpdate="CASCADE"
+                                 onDelete="CASCADE"/>
+
+        <!-- Gas table -->
+        <createTable tableName="gas">
+            <column name="id" type="VARCHAR2(50)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="debt" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="service" type="VARCHAR2(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <!-- water table -->
+        <createTable tableName="water">
+            <column name="id" type="VARCHAR2(50)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="debt" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <!-- electricity table -->
+        <createTable tableName="electricity">
+            <column name="id" type="VARCHAR2(50)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="debt" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <!--User phone table -->
+        <createTable tableName="user_phone">
+            <column name="id" type="VARCHAR2(50)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="value" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="VARCHAR2(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createIndex tableName="user_phone" indexName="USER_PHONE_VALUE_INDEX">
+            <column name="value"/>
+        </createIndex>
+        <addForeignKeyConstraint baseTableName="user_phone"
+                                 baseColumnNames="user_id"
+                                 constraintName="USER_PHONE_USER_FK"
+                                 referencedTableName="user"
+                                 referencedColumnNames="id"
+                                 onUpdate="CASCADE"
+                                 onDelete="CASCADE"/>
+
+        <!-- User utility -->
+        <createTable tableName="user_utility">
+            <column name="utility_id" type="VARCHAR2(50)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="user_id" type="VARCHAR(50)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="gas_id" type="VARCHAR(50)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="water_id" type="VARCHAR(50)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="electricity_id" type="VARCHAR2(50)">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="user_utility"
+                                 baseColumnNames="user_id"
+                                 constraintName="USER_UTILITY_USER_FK"
+                                 referencedTableName="user"
+                                 referencedColumnNames="id"
+                                 onUpdate="CASCADE"
+                                 onDelete="CASCADE"/>
+        <addForeignKeyConstraint baseTableName="user_utility"
+                                 baseColumnNames="gas_id"
+                                 constraintName="USER_UTILITY_GAS_FK"
+                                 referencedTableName="gas"
+                                 referencedColumnNames="id"
+                                 onUpdate="CASCADE"
+                                 onDelete="CASCADE"/>
+        <addForeignKeyConstraint baseTableName="user_utility"
+                                 baseColumnNames="water_id"
+                                 constraintName="USER_UTILITY_WATER_FK"
+                                 referencedTableName="water"
+                                 referencedColumnNames="id"
+                                 onUpdate="CASCADE"
+                                 onDelete="CASCADE"/>
+        <addForeignKeyConstraint baseTableName="user_utility"
+                                 baseColumnNames="electricity_id"
+                                 constraintName="USER_UTILITY_ELECTRICITY_FK"
+                                 referencedTableName="electricity"
+                                 referencedColumnNames="id"
+                                 onUpdate="CASCADE"
+                                 onDelete="CASCADE"/>
+    </changeSet>
+
+</databaseChangeLog>
