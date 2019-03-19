@@ -1,6 +1,7 @@
 package com.onlinebank.core.manager.imc;
 
 import com.onlinebank.core.data.domain.Gas;
+import com.onlinebank.core.exeption.NotFoundException;
 import com.onlinebank.core.manager.IGasManager;
 import com.onlinebank.core.repository.GasRepository;
 import org.slf4j.Logger;
@@ -29,5 +30,23 @@ public class GasManager implements IGasManager {
         }
 
         gasRepository.save(gas);
+    }
+
+    @Override
+    public void update(Gas gas) throws IllegalArgumentException {
+        if (gas == null) {
+            throw new IllegalArgumentException("address.null");
+        }
+        gasRepository.save(gas);
+    }
+
+    @Override
+    public Gas getByid(String id) throws NotFoundException {
+        Gas gas = gasRepository.findOneById(id);
+
+        if (gas == null) {
+            throw new NotFoundException("gas.not.found", id);
+        }
+        return gas;
     }
 }

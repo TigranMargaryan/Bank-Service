@@ -7,4 +7,5 @@ import org.springframework.data.repository.CrudRepository;
 
 @Repository
 public interface GasRepository extends JpaRepository<Gas, String> {
+    Gas findOneById(String id);
 }

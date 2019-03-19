@@ -6,4 +6,12 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserAddressRepository extends PagingAndSortingRepository<UserAddress, String> {
+
+    UserAddress findOneById(String id);
+
+    UserAddress findOneByUserId(String userId);
+
+    UserAddress findOneByUserIdAndId(String userId, String id);
+
+    int deleteByUserIdAndId(String userId, String id);
 }

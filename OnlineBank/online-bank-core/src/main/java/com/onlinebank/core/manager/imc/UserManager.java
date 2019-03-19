@@ -18,6 +18,16 @@ public class UserManager implements IUserManager {
     }
 
     @Override
+    public User getByUserId(String id) throws NotFoundException {
+        User user =userRepository.findById(id).orElse(null);
+
+
+        if (user == null) {
+            throw new NotFoundException("user.not.found", id);
+        }
+        return user;
+    }
+    @Override
     public User getById(String id) throws NotFoundException {
         User user =userRepository.findOneById(id);
 
@@ -36,5 +46,11 @@ public class UserManager implements IUserManager {
         }
 
         userRepository.save(user);
+    }
+
+    @Override
+    public void delete(String id) throws NotFoundException {
+
+        userRepository.deleteById(id);
     }
 }

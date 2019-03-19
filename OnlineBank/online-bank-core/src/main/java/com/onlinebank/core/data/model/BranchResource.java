@@ -3,10 +3,9 @@ package com.onlinebank.core.data.model;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class BranchResource {
 
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private String id;
 
     private String name;
@@ -37,7 +36,7 @@ public class BranchResource {
         this.assets = assets;
     }
 
-    @Override
+   /* @Override
 public String toString(){
         final StringBuffer buffer = new StringBuffer("BranchResource{");
         buffer.append("id=").append(id);
@@ -46,4 +45,5 @@ public String toString(){
         buffer.append('}');
         return buffer.toString();
     }
+    */
 }

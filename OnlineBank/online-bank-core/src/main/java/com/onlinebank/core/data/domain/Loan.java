@@ -7,21 +7,29 @@ import javax.persistence.*;
 public class Loan extends BaseEntity{
 
     @Column(name = "amount")
-    private Integer amount;
+    private Long amount;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.REFRESH})
+    @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.REFRESH})
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REFRESH)
     @JoinColumn(name = "branch_id", nullable = false)
     private Branch branch;
 
-    public Integer getAmount() {
+    public String getUserID() {
+        if (getUser() != null) {
+            return getUser().getId();
+        }
+
+        return null;
+    }
+
+    public Long getAmount() {
         return amount;
     }
 
-    public void setAmount(Integer amount) {
+    public void setAmount(Long amount) {
         this.amount = amount;
     }
 

@@ -1,5 +1,7 @@
 package com.onlinebank.core.data.domain;
 
+import com.onlinebank.core.config.UUId;
+
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
@@ -23,7 +25,7 @@ public class BaseEntity implements Serializable {
     }
 
     public void setId() {
-        this.id = UUID.randomUUID().toString();
+        this.id = UUId.UUid();
     }
 
     @PrePersist

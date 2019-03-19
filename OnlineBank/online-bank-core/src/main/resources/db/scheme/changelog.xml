@@ -164,7 +164,17 @@
             <column name="service" type="VARCHAR2(50)">
                 <constraints nullable="false"/>
             </column>
+            <column name="user_id" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
+        <addForeignKeyConstraint baseTableName="gas"
+                                 baseColumnNames="user_id"
+                                 constraintName="GAS_USER_FK"
+                                 referencedTableName="user"
+                                 referencedColumnNames="id"
+                                 onUpdate="CASCADE"
+                                 onDelete="CASCADE"/>
 
         <!-- water table -->
         <createTable tableName="water">
@@ -177,7 +187,17 @@
             <column name="date" type="VARCHAR(50)">
                 <constraints nullable="false"/>
             </column>
+            <column name="user_id" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
+        <addForeignKeyConstraint baseTableName="water"
+                                 baseColumnNames="user_id"
+                                 constraintName="WATER_USER_FK"
+                                 referencedTableName="user"
+                                 referencedColumnNames="id"
+                                 onUpdate="CASCADE"
+                                 onDelete="CASCADE"/>
 
         <!-- electricity table -->
         <createTable tableName="electricity">
@@ -190,7 +210,17 @@
             <column name="date" type="VARCHAR(50)">
                 <constraints nullable="false"/>
             </column>
+            <column name="user_id" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
+        <addForeignKeyConstraint baseTableName="electricity"
+                                 baseColumnNames="user_id"
+                                 constraintName="ELECTRICITY_USER_FK"
+                                 referencedTableName="user"
+                                 referencedColumnNames="id"
+                                 onUpdate="CASCADE"
+                                 onDelete="CASCADE"/>
 
         <!--User phone table -->
         <createTable tableName="user_phone">
@@ -215,52 +245,6 @@
                                  onUpdate="CASCADE"
                                  onDelete="CASCADE"/>
 
-        <!-- User utility -->
-        <createTable tableName="user_utility">
-            <column name="utility_id" type="VARCHAR2(50)">
-                <constraints primaryKey="true"/>
-            </column>
-            <column name="user_id" type="VARCHAR(50)">
-                <constraints nullable="true"/>
-            </column>
-            <column name="gas_id" type="VARCHAR(50)">
-                <constraints nullable="true"/>
-            </column>
-            <column name="water_id" type="VARCHAR(50)">
-                <constraints nullable="true"/>
-            </column>
-            <column name="electricity_id" type="VARCHAR2(50)">
-                <constraints nullable="true"/>
-            </column>
-        </createTable>
-        <addForeignKeyConstraint baseTableName="user_utility"
-                                 baseColumnNames="user_id"
-                                 constraintName="USER_UTILITY_USER_FK"
-                                 referencedTableName="user"
-                                 referencedColumnNames="id"
-                                 onUpdate="CASCADE"
-                                 onDelete="CASCADE"/>
-        <addForeignKeyConstraint baseTableName="user_utility"
-                                 baseColumnNames="gas_id"
-                                 constraintName="USER_UTILITY_GAS_FK"
-                                 referencedTableName="gas"
-                                 referencedColumnNames="id"
-                                 onUpdate="CASCADE"
-                                 onDelete="CASCADE"/>
-        <addForeignKeyConstraint baseTableName="user_utility"
-                                 baseColumnNames="water_id"
-                                 constraintName="USER_UTILITY_WATER_FK"
-                                 referencedTableName="water"
-                                 referencedColumnNames="id"
-                                 onUpdate="CASCADE"
-                                 onDelete="CASCADE"/>
-        <addForeignKeyConstraint baseTableName="user_utility"
-                                 baseColumnNames="electricity_id"
-                                 constraintName="USER_UTILITY_ELECTRICITY_FK"
-                                 referencedTableName="electricity"
-                                 referencedColumnNames="id"
-                                 onUpdate="CASCADE"
-                                 onDelete="CASCADE"/>
     </changeSet>
 
 </databaseChangeLog>

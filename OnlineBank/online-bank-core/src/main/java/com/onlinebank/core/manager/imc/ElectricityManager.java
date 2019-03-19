@@ -1,6 +1,7 @@
 package com.onlinebank.core.manager.imc;
 
 import com.onlinebank.core.data.domain.Electricity;
+import com.onlinebank.core.exeption.NotFoundException;
 import com.onlinebank.core.manager.IElectricityManager;
 import com.onlinebank.core.repository.ElectricityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +25,23 @@ public class ElectricityManager implements IElectricityManager {
             throw new IllegalArgumentException("electricity.null");
         }
         electricityRepository.save(electricity);
+    }
+
+    @Override
+    public void update(Electricity electricity) throws IllegalArgumentException {
+        if (electricity == null) {
+            throw new IllegalArgumentException("electric.null");
+        }
+        electricityRepository.save(electricity);
+    }
+
+    @Override
+    public Electricity getById(String id) throws NotFoundException {
+        Electricity electricity = electricityRepository.findOneById(id);
+
+        if (electricity == null) {
+            throw new NotFoundException("gas.not.found", id);
+        }
+        return electricity;
     }
 }

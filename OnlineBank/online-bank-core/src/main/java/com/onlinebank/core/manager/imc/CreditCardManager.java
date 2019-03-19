@@ -34,6 +34,14 @@ public class CreditCardManager implements ICreditCardManager {
     }
 
     @Override
+    public void update(CreditCard card) throws IllegalArgumentException {
+        if (card == null) {
+            throw new IllegalArgumentException("address.null");
+        }
+        cardRepository.save(card);
+    }
+
+    @Override
     public CreditCard getById(String id) throws NotFoundException {
         CreditCard card = cardRepository.findOneById(id);
 

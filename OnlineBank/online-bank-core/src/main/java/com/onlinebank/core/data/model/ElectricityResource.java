@@ -1,6 +1,7 @@
 package com.onlinebank.core.data.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class ElectricityResource {
@@ -10,6 +11,17 @@ public class ElectricityResource {
     private Long debt;
 
     private String date;
+
+    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
+    private String userId;
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 
     public String getId() {
         return id;

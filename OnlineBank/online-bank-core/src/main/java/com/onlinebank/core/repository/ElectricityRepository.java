@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ElectricityRepository extends PagingAndSortingRepository<Electricity, String > {
+    Electricity findOneById(String id);
 }

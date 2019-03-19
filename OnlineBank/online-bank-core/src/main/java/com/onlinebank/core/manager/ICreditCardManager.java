@@ -9,6 +9,8 @@ public interface ICreditCardManager {
 
     void delete(String userId, String id) throws IllegalArgumentException;
 
+    void update(CreditCard card) throws IllegalArgumentException;
+
     CreditCard getById(String id) throws NotFoundException;
 
     CreditCard getByUserId(String userId) throws NotFoundException;

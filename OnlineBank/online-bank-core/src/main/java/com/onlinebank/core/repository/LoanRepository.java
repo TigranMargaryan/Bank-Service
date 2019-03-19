@@ -1,10 +1,9 @@
 package com.onlinebank.core.repository;
 
-import com.onlinebank.core.data.domain.Water;
+import com.onlinebank.core.data.domain.Loan;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface WaterRepository extends PagingAndSortingRepository<Water, String > {
-    Water findOneById(String id);
+public interface LoanRepository extends PagingAndSortingRepository<Loan, String> {
 }
