@@ -1,10 +1,10 @@
-package com.onlinebank.core.config;
+package com.OnlineBank.core.web;
 
 import org.modelmapper.Conditions;
-        import org.modelmapper.ModelMapper;
-        import org.springframework.context.annotation.Bean;
-        import org.springframework.context.annotation.Configuration;
-        import org.springframework.context.annotation.Primary;
+import org.modelmapper.ModelMapper;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class ModelMapperConfig {

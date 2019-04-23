@@ -15,6 +15,9 @@ public class CreditCard extends BaseEntity{
     @Column(name = "code")
     private String code;
 
+    @Column(name = "phone")
+    private String phone;
+
     @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     @JoinColumn(name = "user_id", nullable = false, unique = true)
     private User user;
@@ -34,6 +37,13 @@ public class CreditCard extends BaseEntity{
         this.user = user;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public String getBalance() {
         return balance;

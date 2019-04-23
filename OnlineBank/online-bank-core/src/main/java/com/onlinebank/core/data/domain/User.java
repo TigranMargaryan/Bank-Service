@@ -1,10 +1,11 @@
 package com.onlinebank.core.data.domain;
 
-import javax.persistence.*;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import javax.persistence.*;
 @Entity
 @Table(name = "user")
-public class User extends BaseEntity{
+public class User extends BaseEntity  {
 
     @Column(name = "first_name", nullable = false)
     private String firstName;
@@ -12,8 +13,8 @@ public class User extends BaseEntity{
     @Column(name = "last_name", nullable = false)
     private String lastName;
 
-    @Column(name = "email", nullable = false, unique = true)
-    private String email;
+    @Column(name = "username", nullable = false, unique = true)
+    private String username;
 
     @Column(name = "password", nullable = false, length = 20)
     private String password;
@@ -45,12 +46,12 @@ public class User extends BaseEntity{
         this.address.setUser(this);
     }
 
-    public String getEmail() {
-        return email;
+    public String getUsername() {
+        return username;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -58,7 +59,7 @@ public class User extends BaseEntity{
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = new BCryptPasswordEncoder().encode(password);;
     }
 
     public CreditCard getCreditCard() {

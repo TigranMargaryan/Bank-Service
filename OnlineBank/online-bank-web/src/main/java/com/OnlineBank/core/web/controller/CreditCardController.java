@@ -1,5 +1,6 @@
 package com.OnlineBank.core.web.controller;
 
+import com.onlinebank.core.config.ClickatellRest;
 import com.onlinebank.core.data.domain.CreditCard;
 import com.onlinebank.core.data.domain.User;
 import com.onlinebank.core.data.model.CreditCardResource;
@@ -13,7 +14,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api")
@@ -86,7 +90,7 @@ public class CreditCardController {
 
     @ResponseStatus(HttpStatus.OK)
     @RequestMapping(value = "/users/{userId}/cards/{id}", method = RequestMethod.PUT)
-    public Response updateCard(@PathVariable("userId") String userId, @PathVariable("id") String id, @Valid @RequestBody CreditCardResource cardResource) throws NotFoundException {
+    public Response updateCard(@PathVariable("userId") String userId, @PathVariable("id") String id, @Valid @RequestBody CreditCardResource cardResource) throws NotFoundException, IOException {
         CreditCard card = creditCardManager.getById(id);
 
        /* if (card != null && !card.getUserID().equals(userId)) {
@@ -96,6 +100,12 @@ public class CreditCardController {
         modelMapper.map(cardResource, card);
 
         creditCardManager.update(card);
+
+        String message = "Card use";
+
+        String[] x={card.getPhone()};
+
+        ClickatellRest.multipleNumbers(x, message);
 
         CreditCardResource cardResource1 = modelMapper.map(card, CreditCardResource.class);
 

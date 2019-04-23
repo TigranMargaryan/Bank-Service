@@ -2,9 +2,15 @@ package com.onlinebank.core.data.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.onlinebank.core.config.ClickatellRest;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class CreditCardResource {
+
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private String id;
@@ -14,6 +20,8 @@ public class CreditCardResource {
     private String type;
 
     private String code;
+
+    private String phone;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private String userId;
@@ -46,7 +54,9 @@ public class CreditCardResource {
         return balance;
     }
 
-    public void setBalance(String balance) {
+    public void setBalance(String balance) throws IOException {
+
+
         this.balance = balance;
     }
 
@@ -58,15 +68,12 @@ public class CreditCardResource {
                 this.userId = userId;
             }
 
-    @Override
-    public String toString() {
-        final StringBuffer sb = new StringBuffer("CreditCardResource{");
-        sb.append("id=").append(id);
-        sb.append(", type='").append(type).append('\'');
-        sb.append(", code='").append(code).append('\'');
-        sb.append(", balance='").append(balance).append('\'');
-        sb.append(", userId=").append(userId);
-        sb.append('}');
-        return sb.toString();
+    public String getPhone() {
+        return phone;
     }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
 }

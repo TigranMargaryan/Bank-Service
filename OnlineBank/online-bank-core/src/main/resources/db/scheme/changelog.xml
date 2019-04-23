@@ -37,10 +37,10 @@
             <column name="last_name" type="VARCHAR(50)">
                 <constraints nullable="false"/>
             </column>
-           <column name="email" type="VARCHAR2(32)">
+           <column name="username" type="VARCHAR2(32)">
                <constraints primaryKey="false"/>
            </column>
-            <column name="password" type="VARCHAR2(32)">
+            <column name="password" type="VARCHAR2(60)">
                 <constraints primaryKey="false"/>
             </column>
         </createTable>
@@ -73,13 +73,16 @@
                 <constraints primaryKey="true"/>
             </column>
             <column name="balance" type="VARCHAR2(32)">
-                <constraints nullable="true"/>
+                <constraints nullable="false"/>
             </column>
             <column name="type" type="VARCHAR2(32)">
-                <constraints nullable="true"/>
+                <constraints nullable="false"/>
             </column>
             <column name="code" type="VARCHAR2(32)">
-                <constraints nullable="true"/>
+                <constraints nullable="false"/>
+            </column>
+            <column name="phone" type="VARCHAR2(32)">
+                <constraints nullable="false"/>
             </column>
             <column name="user_id" type="VARCHAR2(50)">
                 <constraints nullable="false" unique="true"/>
