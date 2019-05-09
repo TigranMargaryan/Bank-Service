@@ -1,4 +1,4 @@
-package onlinebank.base.data.resource;
+package onlinebank.base.data.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

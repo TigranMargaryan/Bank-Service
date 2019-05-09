@@ -1,8 +1,7 @@
-package com.onlinebank.core.manager;
+package onlinebank.base.manager;
 
-import com.onlinebank.core.data.domain.User;
-import com.onlinebank.core.exeption.NotFoundException;
-import org.springframework.security.core.userdetails.UserDetails;
+import onlinebank.base.data.domain.User;
+import onlinebank.base.exeption.NotFoundException;
 
 public interface IUserManager {
 

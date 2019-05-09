@@ -1,9 +1,9 @@
-package com.onlinebank.core.manager.imc;
+package onlinebank.base.manager.imc;
 
-import com.onlinebank.core.data.domain.CreditCard;
-import com.onlinebank.core.exeption.NotFoundException;
-import com.onlinebank.core.manager.ICreditCardManager;
-import com.onlinebank.core.repository.CreditCardRepository;
+import onlinebank.base.data.domain.CreditCard;
+import onlinebank.base.exeption.NotFoundException;
+import onlinebank.base.manager.ICreditCardManager;
+import onlinebank.base.repository.CreditCardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

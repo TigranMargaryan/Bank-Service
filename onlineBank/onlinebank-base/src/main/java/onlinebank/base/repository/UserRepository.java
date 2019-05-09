@@ -1,8 +1,7 @@
-package com.onlinebank.core.repository;
+package onlinebank.base.repository;
 
-import com.onlinebank.core.data.domain.User;
+import onlinebank.base.data.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository

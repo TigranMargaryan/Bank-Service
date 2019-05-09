@@ -1,13 +1,13 @@
-package com.OnlineBank.core.web.controller;
+package onlineBank.web.controller;
 
-import com.onlinebank.core.config.ClickatellRest;
-import com.onlinebank.core.data.domain.CreditCard;
-import com.onlinebank.core.data.domain.User;
-import com.onlinebank.core.data.model.CreditCardResource;
-import com.onlinebank.core.data.model.Response;
-import com.onlinebank.core.exeption.NotFoundException;
-import com.onlinebank.core.manager.ICreditCardManager;
-import com.onlinebank.core.manager.IUserManager;
+import onlinebank.base.config.ClickatellRest;
+import onlinebank.base.data.domain.CreditCard;
+import onlinebank.base.data.domain.User;
+import onlinebank.base.data.model.CreditCardResource;
+import onlinebank.base.data.model.Response;
+import onlinebank.base.exeption.NotFoundException;
+import onlinebank.base.manager.ICreditCardManager;
+import onlinebank.base.manager.IUserManager;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,9 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api")

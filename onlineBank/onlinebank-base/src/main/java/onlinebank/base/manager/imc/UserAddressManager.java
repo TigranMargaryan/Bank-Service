@@ -1,9 +1,9 @@
-package com.onlinebank.core.manager.imc;
+package onlinebank.base.manager.imc;
 
-import com.onlinebank.core.data.domain.UserAddress;
-import com.onlinebank.core.exeption.NotFoundException;
-import com.onlinebank.core.manager.IUserAddressManager;
-import com.onlinebank.core.repository.UserAddressRepository;
+import onlinebank.base.data.domain.UserAddress;
+import onlinebank.base.exeption.NotFoundException;
+import onlinebank.base.manager.IUserAddressManager;
+import onlinebank.base.repository.UserAddressRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

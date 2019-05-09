@@ -1,9 +1,9 @@
-package com.onlinebank.core.manager.imc;
+package onlinebank.base.manager.imc;
 
-import com.onlinebank.core.data.domain.User;
-import com.onlinebank.core.exeption.NotFoundException;
-import com.onlinebank.core.manager.IUserManager;
-import com.onlinebank.core.repository.UserRepository;
+import onlinebank.base.data.domain.User;
+import onlinebank.base.exeption.NotFoundException;
+import onlinebank.base.manager.IUserManager;
+import onlinebank.base.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -1,4 +1,4 @@
-package com.OnlineBank.core.web.config;
+package onlineBank.web.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

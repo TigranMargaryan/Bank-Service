@@ -1,4 +1,4 @@
-package com.onlinebank.core.data.domain;
+package onlinebank.base.data.domain;
 
 import javax.persistence.*;
 

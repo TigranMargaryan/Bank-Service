@@ -1,4 +1,4 @@
-package com.OnlineBank.core.web.config;
+package onlineBank.web.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

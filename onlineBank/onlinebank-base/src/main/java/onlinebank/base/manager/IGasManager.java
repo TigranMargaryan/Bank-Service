@@ -1,7 +1,7 @@
-package com.onlinebank.core.manager;
+package onlinebank.base.manager;
 
-import com.onlinebank.core.data.domain.Gas;
-import com.onlinebank.core.exeption.NotFoundException;
+import onlinebank.base.data.domain.Gas;
+import onlinebank.base.exeption.NotFoundException;
 
 public interface IGasManager {
 

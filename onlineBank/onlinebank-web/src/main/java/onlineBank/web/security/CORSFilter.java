@@ -1,4 +1,4 @@
-package com.OnlineBank.core.web.config;
+package onlineBank.web.security;
 
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;

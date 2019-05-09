@@ -1,6 +1,6 @@
-package com.onlinebank.core.manager.imc;
+package onlinebank.base.manager.imc;
 
-import com.onlinebank.core.data.domain.User;
+import onlinebank.base.data.domain.User;
 
 import java.util.List;
 

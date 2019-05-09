@@ -1,6 +1,6 @@
-package com.onlinebank.core.repository;
+package onlinebank.base.repository;
 
-import com.onlinebank.core.data.domain.UserAddress;
+import onlinebank.base.data.domain.UserAddress;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 

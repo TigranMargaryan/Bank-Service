@@ -1,4 +1,4 @@
-package com.OnlineBank.core.web;
+package onlineBank.web;
 
 import org.modelmapper.Conditions;
 import org.modelmapper.ModelMapper;

@@ -1,13 +1,12 @@
-package com.onlinebank.core.data.domain;
+package onlinebank.base.data.domain;
 
-import com.onlinebank.core.config.UUId;
+import onlinebank.base.config.UUId;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.PrePersist;
 import java.io.Serializable;
-import java.util.UUID;
 
 @MappedSuperclass
 public class BaseEntity implements Serializable {

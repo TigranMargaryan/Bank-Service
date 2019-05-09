@@ -1,9 +1,9 @@
-package com.onlinebank.core.manager.imc;
+package onlinebank.base.manager.imc;
 
-import com.onlinebank.core.data.domain.Electricity;
-import com.onlinebank.core.exeption.NotFoundException;
-import com.onlinebank.core.manager.IElectricityManager;
-import com.onlinebank.core.repository.ElectricityRepository;
+import onlinebank.base.data.domain.Electricity;
+import onlinebank.base.exeption.NotFoundException;
+import onlinebank.base.manager.IElectricityManager;
+import onlinebank.base.repository.ElectricityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.onlinebank.core.exeption;
+package onlinebank.base.exeption;
 
 public class NotFoundException extends Exception {
 

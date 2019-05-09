@@ -1,12 +1,12 @@
-package com.OnlineBank.core.web.controller;
+package onlineBank.web.controller;
 
-import com.onlinebank.core.data.domain.User;
-import com.onlinebank.core.data.domain.UserAddress;
-import com.onlinebank.core.data.model.Response;
-import com.onlinebank.core.data.model.UserAddressResource;
-import com.onlinebank.core.exeption.NotFoundException;
-import com.onlinebank.core.manager.IUserAddressManager;
-import com.onlinebank.core.manager.IUserManager;
+import onlinebank.base.data.domain.User;
+import onlinebank.base.data.domain.UserAddress;
+import onlinebank.base.data.model.Response;
+import onlinebank.base.data.model.UserAddressResource;
+import onlinebank.base.exeption.NotFoundException;
+import onlinebank.base.manager.IUserAddressManager;
+import onlinebank.base.manager.IUserManager;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

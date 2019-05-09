@@ -1,6 +1,6 @@
-package com.onlinebank.core.repository;
+package onlinebank.base.repository;
 
-import com.onlinebank.core.data.domain.CreditCard;
+import onlinebank.base.data.domain.CreditCard;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 

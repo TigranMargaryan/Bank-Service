@@ -1,4 +1,4 @@
-package com.onlinebank.core.config;
+package onlinebank.base.config;
 
 import java.io.*;
 import java.net.HttpURLConnection;

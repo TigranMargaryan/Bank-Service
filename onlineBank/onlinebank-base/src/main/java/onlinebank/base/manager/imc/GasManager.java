@@ -1,14 +1,11 @@
-package com.onlinebank.core.manager.imc;
+package onlinebank.base.manager.imc;
 
-import com.onlinebank.core.data.domain.Gas;
-import com.onlinebank.core.exeption.NotFoundException;
-import com.onlinebank.core.manager.IGasManager;
-import com.onlinebank.core.repository.GasRepository;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import onlinebank.base.data.domain.Gas;
+import onlinebank.base.exeption.NotFoundException;
+import onlinebank.base.manager.IGasManager;
+import onlinebank.base.repository.GasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class GasManager implements IGasManager {

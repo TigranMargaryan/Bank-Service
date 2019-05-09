@@ -1,4 +1,4 @@
-package com.onlinebank.core.manager;
+package onlinebank.base.manager;
 
 import java.io.Serializable;
 

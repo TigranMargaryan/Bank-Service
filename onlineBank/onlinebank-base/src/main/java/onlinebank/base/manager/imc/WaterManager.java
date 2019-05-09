@@ -1,9 +1,9 @@
-package com.onlinebank.core.manager.imc;
+package onlinebank.base.manager.imc;
 
-import com.onlinebank.core.data.domain.Water;
-import com.onlinebank.core.exeption.NotFoundException;
-import com.onlinebank.core.manager.IWaterManager;
-import com.onlinebank.core.repository.WaterRepository;
+import onlinebank.base.data.domain.Water;
+import onlinebank.base.exeption.NotFoundException;
+import onlinebank.base.manager.IWaterManager;
+import onlinebank.base.repository.WaterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

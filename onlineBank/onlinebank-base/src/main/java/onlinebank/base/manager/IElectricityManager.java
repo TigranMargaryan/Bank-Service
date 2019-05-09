@@ -1,7 +1,7 @@
-package com.onlinebank.core.manager;
+package onlinebank.base.manager;
 
-import com.onlinebank.core.data.domain.Electricity;
-import com.onlinebank.core.exeption.NotFoundException;
+import onlinebank.base.data.domain.Electricity;
+import onlinebank.base.exeption.NotFoundException;
 
 public interface IElectricityManager {
 

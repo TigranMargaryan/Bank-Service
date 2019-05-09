@@ -1,12 +1,12 @@
-package com.OnlineBank.core.web.controller;
+package onlineBank.web.controller;
 
-import com.onlinebank.core.data.domain.Electricity;
-import com.onlinebank.core.data.domain.User;
-import com.onlinebank.core.data.model.ElectricityResource;
-import com.onlinebank.core.data.model.Response;
-import com.onlinebank.core.exeption.NotFoundException;
-import com.onlinebank.core.manager.IElectricityManager;
-import com.onlinebank.core.manager.IUserManager;
+import onlinebank.base.data.domain.Electricity;
+import onlinebank.base.data.domain.User;
+import onlinebank.base.data.model.ElectricityResource;
+import onlinebank.base.data.model.Response;
+import onlinebank.base.exeption.NotFoundException;
+import onlinebank.base.manager.IElectricityManager;
+import onlinebank.base.manager.IUserManager;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
