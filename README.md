@@ -25,7 +25,7 @@
     -  [Postman](https://www.getpostman.com/)
 -------
 
-####Structure
+#### Structure
 
 ```
 ├── onlinebank
@@ -35,6 +35,6 @@
 ```
 -------
 
-####Build
+#### Build
 
 To build all application, first, run the backend side then frontend and navigate to http://localhost:4200/ 
