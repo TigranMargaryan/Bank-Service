@@ -91,9 +91,6 @@ public class CreditCardController {
     public Response updateCard(@PathVariable("userId") String userId, @PathVariable("id") String id, @Valid @RequestBody CreditCardResource cardResource) throws NotFoundException, IOException {
         CreditCard card = creditCardManager.getById(id);
 
-       /* if (card != null && !card.getUserID().equals(userId)) {
-            throw new NotFoundException("user.not.have.the.card", userId, id);
-        }*/
 
         modelMapper.map(cardResource, card);
 
@@ -114,9 +111,7 @@ public class CreditCardController {
 
     @ResponseStatus(HttpStatus.ACCEPTED)
     @RequestMapping(value = "/users/{userId}/cards/{id}", method = RequestMethod.DELETE)
-    public Response deleteCreditcard(@PathVariable("userId") String userId, @PathVariable("id") String id) throws NotFoundException {
-
-        CreditCard card = creditCardManager.getByIdAndUserId(id, userId);
+    public Response deleteCreditcard(@PathVariable("userId") String userId, @PathVariable("id") String id)  {
 
         creditCardManager.delete(id, userId);
 
