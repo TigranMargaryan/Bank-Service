@@ -25,6 +25,18 @@
     -  [Postman](https://www.getpostman.com/)
 -------
 
+#### Environment setup
+
+ * Install Java SE8()
+ * [Set Java system variables](http://www.oracle.com/technetwork/java/javase/overview/index.html)
+ * [Downloading Apache Maven](Downloading Apache Maven)
+ * [Install Maven](https://maven.apache.org/install.html)
+ * [Download MySql](https://dev.mysql.com/downloads/mysql/)
+ * [Install MySql](https://dev.mysql.com/doc/mysql-installer/en/)
+
+By default in application.properties MySQL connection parametors are username=root  password='empty'
+                                                      
+
 #### Structure
 
 ```
