@@ -41,6 +41,7 @@ By default in application.properties MySQL connection parametors are username=ro
 
 ```
 ├── onlinebank
+|   ├── bank-test---------# postman test
 |   ├── onlinebank-base---------# resources,services and data layers
 |   ├── onlinebank-web------------------# web related data and security
 |   └── pom.xml------------------# all maven dependencies

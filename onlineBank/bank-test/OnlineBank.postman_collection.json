@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "7acd80d4-bea2-4f16-8c8d-e4094fe6fedd",
+		"name": "OnlineBank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User#CreateUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b1590a88-686a-4ee8-86b9-b757e0d206b6",
+						"exec": [
+							"\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"\r",
+							"tests[\"Status code is 201\"] = responseCode.code === 201;\r",
+							"\r",
+							"postman.setEnvironmentVariable(\"bank_user_id\", jsonData.data.user.id);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\":\"tik\",\n    \"lastName\":\"tiko\",\n\t\"username\": \"tlam14\",\n\t\"password\": \"tlam14\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/188ffefa9b8645f0890b5fb3af183290",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"188ffefa9b8645f0890b5fb3af183290"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creditCard#CreateCard",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"balance\": \"25000\",\n\"type\": \"VISA\",\n\"code\": \"1234\",\n\"phone\":\"37499257275\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/{{bank_user_id}}/cards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"{{bank_user_id}}",
+						"cards"
+					]
+				},
+				"description": "CreditCard"
+			},
+			"response": []
+		},
+		{
+			"name": "Electricity#Creater",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"debt\": 2500,\n\t\"date\": \"05.26.19\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/{{bank_user_id}}/electricities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"{{bank_user_id}}",
+						"electricities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Water#Creater",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"debt\": 1200,\n\t\"date\": \"05.26.19\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/{{bank_user_id}}/waters",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"{{bank_user_id}}",
+						"waters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gas#Creater",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"debt\": 8000,\n\t\"date\": \"05.26.19\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/{{bank_user_id}}/gases",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"{{bank_user_id}}",
+						"gases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Address#Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"country\": \"USA\",\r\n  \"city\": \"NewYork\",\r\n  \"street\": \"Black 6\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/{{bank_user_id}}/addresses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"{{bank_user_id}}",
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Branch#Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"IDBank\",\n\t\"assets\": 1500000\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/branches",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"branches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login#Admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8b77d006-1514-46e5-bcaf-f470075fa75b",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Content-Type is JSON\"] = postman.getResponseHeader(\"Content-Type\") === \"application/json;charset=UTF-8\";",
+							"",
+							"tests[\"Access token is returned: \" + jsonData.access_token] = responseBody.has(\"access_token\");",
+							"tests[\"Refresh token is returned: \" + jsonData.refresh_token] = responseBody.has(\"refresh_token\");",
+							"",
+							"postman.setEnvironmentVariable(\"access_token\", jsonData.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZGV2Z2xhbi1jbGllbnQ6ZGV2Z2xhbi1zZWNyZXQ="
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "read write",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "client_secret",
+							"value": "devglan-secret",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "client_id",
+							"value": "devglan-client",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User#GetUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b1590a88-686a-4ee8-86b9-b757e0d206b6",
+						"exec": [
+							"\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"\r",
+							"tests[\"Status code is 201\"] = responseCode.code === 201;\r",
+							"\r",
+							"postman.setEnvironmentVariable(\"bank_user_id\", jsonData.data.user.id);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\":\"tik\",\n    \"lastName\":\"tiko\",\n\t\"username\": \"tlam141\",\n\t\"password\": \"tlam141\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/{{bank_user_id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"{{bank_user_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
