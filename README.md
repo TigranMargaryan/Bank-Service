@@ -48,6 +48,6 @@ By default in application.properties MySQL connection parametors are username=ro
 ```
 -------
 
-#### Build
+#### Run application
 
-To build all application, first, run the backend side then frontend and navigate to http://localhost:4200/ 
+To run full application, first, run the backend side then frontend and navigate to http://localhost:4200/ 
